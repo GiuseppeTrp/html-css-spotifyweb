@@ -29,6 +29,8 @@
     background-color: black;
     height: 100vh;
     
+    z-index: 10;
+    
   
     
 }
@@ -44,6 +46,7 @@
 .main-cont{
     
     flex-grow: 1;
+    overflow-y:scroll;
     
 }
 
@@ -55,11 +58,26 @@
     background-color:rgba(0, 0, 0, 0.5);
     width: 100vw;
     position: fixed;
+   
 }
 
 
 
 .content {
     height: 100vh;
-    background-color:darkslategray ;
+    background-color: rgb(21, 23, 36);
 }
+
+
+
+footer .foot-cont {
+    width: 100vw;
+    height: 90px;
+    background-color: rgb(52, 52, 52);
+    position: fixed;
+    bottom: 1px;
+    z-index: 100;
+
+}
+
+
