@@ -47,6 +47,7 @@
     
     flex-grow: 1;
     overflow-y:scroll;
+    width: 100vh;
     
 }
 
@@ -67,6 +68,40 @@
     height: 100vh;
     background-color: rgb(21, 23, 36);
 }
+
+
+
+.recently{
+    margin-top: 90px;
+    background-color: brown;
+    height: calc(100% / 3);
+   
+}
+
+
+.created-for{
+  
+    background-color: green;
+    height: calc(100% / 3);
+
+}
+
+.artist{
+    background-color: yellow;
+    height: calc(100% / 3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
