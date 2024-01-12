@@ -5,12 +5,17 @@
 }
 
 
+
 /* general */
 
 .flex {
     display: flex;
 }
 
+
+body{
+    background-color: rgba(0, 0, 0, 0.507);
+}
 /* end general */
 
 
@@ -27,6 +32,7 @@
 .container .navbar {
     min-width: 225px;
     background-color: black;
+    overflow-x: scroll;
    
     
     z-index: 10;
@@ -45,22 +51,64 @@
 
 .main-cont{
     
+    width: 100%;
     flex-grow: 1;
     overflow-y:scroll;
-    width: 100vh;
+    width: 100vw;
+    height: 100vh;
     
 }
 
 
 
 
- .top-board{
-    height: 90px;
+ /* top-bar */
+ .top-bar{
+    min-height: 90px;
+    width:  calc(100vw - 225px);
     background-color:rgba(0, 0, 0, 0.5);
-    width: 100vw;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    
     position: fixed;
+    right: 0;
+    top: 0;
+    padding: 20px;
+   
+    
+    z-index: 999999999;
+    color: red;
+   
+
    
 }
+
+.links-bar{
+    justify-content: center;
+    width: 100%;
+    
+
+    gap: 24px;
+    
+    align-self: flex-end;
+   
+    list-style-type: none;
+    text-transform: uppercase;
+   
+    
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -68,22 +116,30 @@
     height: 100vh;
     background-color: rgb(21, 23, 36);
     margin-bottom: 90px;
+
 }
 
 
 
 .recently{
     margin-top: 90px;
-    background-color: brown;
-    height: calc(100% / 3);
+    background-color: rgba(143, 143, 143, 0.5);
+    height: calc(100vh / 3);
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 50px;
     
     justify-content: space-around;
    
    
 
 }
+
+
+
+
+
+
+
 
 
 .songs{
@@ -97,7 +153,7 @@
 
 .created-for{
   
-    background-color: green;
+    background-color: #19141400;
     height: calc(100% / 3);
    
     padding: 10px 0 10px 18px;
@@ -168,5 +224,3 @@ footer .foot-cont {
     z-index: 100;
 
 }
-
-
