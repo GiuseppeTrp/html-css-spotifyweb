@@ -20,6 +20,11 @@ body{
 
 
 
+main{      
+    height: calc(100vh - 90px);
+    display: flex;
+    
+}
 
 
 
@@ -29,16 +34,22 @@ body{
 
 /* navbar */
 
-.container .navbar {
-    min-width: 225px;
+ .navbar {
     background-color: black;
-    overflow-x: scroll;
-   
-    
-    z-index: 10;
-    
-  
-    
+    min-width: 230px;
+    height: 100vh;
+    padding: 20px 20px 10px;
+
+}
+
+
+.logo{
+    width:132px;
+
+
+}
+.logo img{
+    width: 100%;
 }
 
 /* end navbar */
@@ -51,11 +62,11 @@ body{
 
 .main-cont{
     
-    width: 100%;
-    flex-grow: 1;
-    overflow-y:scroll;
-    width: 100vw;
-    height: 100vh;
+    width: calc(100% - 230px);
+    overflow-y: auto;
+    background-color: rgb(20, 25, 34);
+    color: white;
+    padding: 90px 20px 20px;
     
 }
 
@@ -64,42 +75,37 @@ body{
 
  /* top-bar */
  .top-bar{
-    min-height: 90px;
-    width:  calc(100vw - 225px);
-    background-color:rgba(0, 0, 0, 0.5);
-    flex-direction: column;
+   
     justify-content: flex-end;
-    align-items: flex-end;
-
-    
+    align-items: center;
     position: fixed;
-    right: 0;
     top: 0;
+    right: 0;
+    width: calc(100% - 230px);
+    height: 90px;
     padding: 20px;
-   
-    
-    z-index: 999999999;
-    color: red;
-   
-
-   
+    padding: 28px 28px 40px 28px;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
 }
 
 .links-bar{
+  
+  
     justify-content: center;
-    width: 100%;
-    
-
+    flex-wrap: wrap;
     gap: 24px;
-    
-    align-self: flex-end;
-   
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 16px;
     list-style-type: none;
     text-transform: uppercase;
-   
+    font-weight: bold;
+    font-size: 11px;
+}
     
 
-}
 
 
 
@@ -110,102 +116,47 @@ body{
 
 
 
+/* content */
 
 
 .content {
-    height: 100vh;
-    background-color: rgb(21, 23, 36);
-    margin-bottom: 90px;
-
-}
-
-
-
-.recently{
-    margin-top: 90px;
-    background-color: rgba(143, 143, 143, 0.5);
-    height: calc(100vh / 3);
-    flex-wrap: wrap;
-    padding: 50px;
     
-    justify-content: space-around;
-   
-   
-
-}
-
-
-
-
-
-
-
-
-
-.songs{
-
-    width: calc(100% / 6 - 15px) ;
-    background-color: white;
-    
-
-}
-
-
-.created-for{
   
-    background-color: #19141400;
-    height: calc(100% / 3);
-   
-    padding: 10px 0 10px 18px;
     flex-wrap: wrap;
+    gap: 16px;
+   
+}
+
+
+.album{
+
+    width: calc(100% / 6 - 16px / 6 * 5);
+    max-width: 200px;
+}
+
+.cover{
+    margin-bottom: 16px;
+}
+
+.cover img{
+
+    width: 100%;
     
-    justify-content: flex-start;
-    gap: 10px;
-    
+}
+
+.album .text{
+    text-align: center;
 
 }
 
+.album .text .title{
 
-
-.for-you{
-    background-color: white;
-    width: calc((100% / 2) / 2 - 83px);
-   
-
-}
-
-
-
-
-
-
-
-.artist{
-    background-color: yellow;
-    height: calc(100% / 3);
-    padding: 10px 0 10px 18px;
-    flex-wrap: wrap;
-    
-    justify-content: flex-start;
-    gap: 10px;
-}
-
-
-.popular{
-   
-    width: calc((100% / 2) / 2 - 83px);
-   
-    background-color: white;
-   
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
 
 }
-
-
-
-
-
-
-
+/* end content */
 
 
 
@@ -218,7 +169,7 @@ body{
 footer .foot-cont {
     width: 100vw;
     height: 90px;
-    background-color: rgb(52, 52, 52);
+    background-color: red;
     position: fixed;
     bottom: 1px;
     z-index: 100;
