@@ -46,9 +46,7 @@ body{
 
 
 main{      
-    height: 100vh;
-    display: flex;
-    
+    height: calc(100vh - 90px);
     
 }
 
@@ -81,13 +79,15 @@ main{
     text-decoration: none;
 }
 
-.logo{
+.logo .big, .small{
     width:132px;
 
 
 }
-.logo img{
-    width: 100%;
+
+
+.logo .small{
+    display: none;
 }
 
 .menu{
@@ -378,7 +378,8 @@ main{
 }
 .recently .songs .album {
 
-    width: calc((100% - 75px) / 6);
+    width: calc(100% / 6 - 16px / 6 * 5);
+    max-width: 200px;
     align-items: center;
     
 }
@@ -648,6 +649,79 @@ main{
 
 
 /* end footer */
+
+
+
+
+
+@media screen and (max-width: 992px) {
+
+
+    .recently .songs .album {
+        width: calc(100% / 4 - 16px / 4 * 3);
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .songs .album {
+        width: calc(100% / 2 - 16px / 2);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .logo .big {
+        display: none;
+    }
+
+    .logo .small {
+        display: inline-block;
+        width: 28px;
+    }
+
+
+    .navbar {
+        width: 50px;
+        padding: 10px;
+    }
+
+    .navbar button,
+    .navbar a {
+        flex-direction: column;
+    }
+
+    /* nascondo elementi */
+    .navbar button span,
+    .navbar a span,
+    .navbar hr,
+    .playlists
+    {
+        display: none;
+    }
+
+    .navbar .menu-download{
+        padding-bottom: 0;
+    }
+
+
+
+    .main-cont {
+        width: calc(100% - 50px);
+    }
+
+    .main-cont .top-bar {
+        width: calc(100% - 50px);
+    }
+
+
+
+
+}
+
+
+
 
 
 
