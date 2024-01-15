@@ -7,6 +7,10 @@
 
 body{
     font-family: "CircularSpotifyTxT-Black", sans-serif;
+   
+
+    background-color: rgba(0, 0, 0, 0.507);
+    overflow-y: hidden;
 }
 
 
@@ -36,16 +40,13 @@ a{
 }
 
 
-body{
-    background-color: rgba(0, 0, 0, 0.507);
-    overflow-y: hidden;
-    
-}
+
 
 
 
 
 main{      
+  
     height: calc(100vh - 90px);
     
 }
@@ -63,7 +64,7 @@ main{
 
  .navbar {
     background-color: rgb(0, 0, 0);
-    min-width: 230px;
+    width: 230px;
     height: calc(100vh - 90px);
     padding: 20px 20px 10px;
     font-size: 14px;
@@ -227,7 +228,7 @@ main{
     align-items: center;}
 
     
-.navbar .user .image-cont {
+.navbar .user .button-image {
     margin-right: 10px;
     background-color: gray;
     border-radius: 50%;
@@ -236,12 +237,17 @@ main{
     overflow: hidden;
 }
 
-.navbar .user .image-cont  img{
+.navbar .user .button-image  img{
     width: 100%;
 }
 
+
+
+
+
+
 .navbar .user .name{ 
-    font-size: 16px;
+    
     font-weight: bold;
     color: white;
     
@@ -268,7 +274,12 @@ main{
     flex-grow: 1;
     overflow: auto;
     padding: 0 20px 20px 20px;
-    height: calc(100vh / 4) - 90px;
+    
+
+    width: calc(100% - 230px);
+    overflow-y: auto;
+    
+ 
    
     
 }
@@ -278,7 +289,7 @@ main{
 
  
  .top-bar{
-    width: calc(100% - 230px);
+ 
     height: 90px;
     justify-content: flex-end;
     align-items: center;
@@ -345,7 +356,7 @@ main{
   
 
     margin-top: 113px;
-    font-size: 14px;
+    font-size: 13px;
     gap: 22px;
     flex-wrap: wrap;
     text-transform: uppercase;
@@ -666,9 +677,13 @@ main{
 
 
 @media screen and (max-width: 768px) {
-    .songs .album {
-        width: calc(100% / 2 - 16px / 2);
+    .recently .songs .album {
+        width: calc(50% - 8px);
     }
+
+  
+
+    
 }
 
 @media screen and (max-width: 576px) {
@@ -682,27 +697,46 @@ main{
     }
 
 
-    .navbar {
+    main .navbar {
         width: 50px;
         padding: 10px;
     }
 
-    .navbar button,
-    .navbar a {
-        flex-direction: column;
-    }
-
-    /* nascondo elementi */
-    .navbar button span,
-    .navbar a span,
-    .navbar hr,
-    .playlists
-    {
+    
+    main .navbar .playlist,
+    main .navbar .user .name,
+    main .navbar .menu .menu-list a,
+    main .navbar .download-app a,
+    main .navbar hr,
+    main .navbar .playlist-head {
+        
         display: none;
     }
 
+   
+
+    main .navbar .menu {
+        flex-direction: column;
+        position: absolute;
+    
+        top: 5%;
+        
+
+    }
+
+ 
+    
+
     .navbar .menu-download{
         padding-bottom: 0;
+    }
+    main .navbar .download-app{
+        position: absolute;
+        bottom: 20%;
+        left:3%;
+       
+    
+        
     }
 
 
@@ -712,13 +746,35 @@ main{
     }
 
     .main-cont .top-bar {
-        width: calc(100% - 50px);
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 50px;
+       
+    }
+
+    
+
+
+    .navbar .user .button-image{
+        position: absolute;
+        bottom: 15%;
+       
+
+       
+
     }
 
 
 
 
+
 }
+
+
+
+
+
 
 
 
