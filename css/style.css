@@ -13,6 +13,22 @@ body{
     overflow-y: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: rgb(20, 25, 34);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+}
+
+
 
 
 
@@ -508,7 +524,7 @@ main{
  .foot-cont .piece .playing .playing-song .playing-song-info a:first-child{
     color: white;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: none;
 
 }
@@ -516,7 +532,7 @@ main{
  .foot-cont .piece .playing .playing-song .playing-song-info a:last-child{
     color: gray;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 11px;
     text-decoration: none;
 
 }
